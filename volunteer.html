@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Your Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .form-grid { display: flex; gap: 40px; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; }
+        .form-box { flex: 1; min-width: 300px; }
+        .volunteer-card {
+            background-color: #fff7ef; border: 1px solid #ccc; border-radius: 10px;
+            padding: 20px; margin: 10px; width: 300px;
+        }
+        .opportunities {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 20px; margin-top: 30px;
+        }
+        .apply-btn {
+            background-color: #5c3d2e; color: white;
+            padding: 10px; border: none; border-radius: 8px;
+            margin-top: 10px; display: inline-block; text-decoration: none; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Outreach+</h1><p>Connecting surplus food and volunteers to those in need</p></header>
+    <nav>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+        <a href="donate.html">Donate</a><a href="volunteer.html">Volunteer</a><a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Volunteer Your Time</h2>
+        <p>Dedicate your time to meaningful causes by registering as a volunteer or finding opportunities posted by NGOs seeking your help.</p>
+
+        <div class="form-grid">
+            <form class="form-box">
+                <h3>Register as Volunteer</h3>
+                <label>Full Name</label><input type="text" required>
+                <label>Age</label><input type="number" required>
+                <label>Email or Phone</label><input type="text" required>
+                <label>Skills / Interests</label><input type="text" required>
+                <label>Available Time</label><input type="text" required>
+                <label>Preferred NGO Type</label><input type="text">
+                <button class="apply-btn" type="submit">Submit</button>
+            </form>
+
+            <form class="form-box">
+                <h3>Post Volunteer Opportunity (NGO)</h3>
+                <label>NGO Name</label><input type="text" required>
+                <label>Work Description</label><input type="text" required>
+                <label>Required Time & Date</label><input type="text" required>
+                <label>Location</label><input type="text" required>
+                <button class="apply-btn" type="submit">Post Opportunity</button>
+            </form>
+        </div>
+
+        <h3>Current Volunteer Opportunities</h3>
+        <div class="opportunities">
+            <div class="volunteer-card"><strong>Smile Foundation</strong><br>Assist in weekend children’s workshop<br>Aug 10, 2025 — 10:00 AM – 2:00 PM<br>New Delhi, Delhi<br><a href="volunteer_form.html?ngo=Smile Foundation" class="apply-btn">Apply Now</a></div>
+            <div class="volunteer-card"><strong>Narayan Seva Sansthan</strong><br>Help distribute medical kits<br>Aug 12, 2025 — 9:30 AM – 1:30 PM<br>Udaipur, Rajasthan<br><a href="volunteer_form.html?ngo=Narayan Seva Sansthan" class="apply-btn">Apply Now</a></div>
+            <div class="volunteer-card"><strong>PM CARES</strong><br>Logistics help for flood relief camp<br>Aug 14, 2025 — 11:00 AM – 7:00 PM<br>New Delhi<br><a href="volunteer_form.html?ngo=PM CARES" class="apply-btn">Apply Now</a></div>
+            <div class="volunteer-card"><strong>HelpAge India</strong><br>Support elderly during eye camp<br>Aug 15, 2025<br>Pune, Maharashtra<br><a href="volunteer_form.html?ngo=HelpAge India" class="apply-btn">Apply Now</a></div>
+            <div class="volunteer-card"><strong>PM CARES</strong><br>Logistics help for flood relief camp<br>Aug 14, 2025<br>Ahmedabad, Gujarat<br><a href="volunteer_form.html?ngo=PM CARES" class="apply-btn">Apply Now</a></div>
+            <div class="volunteer-card"><strong>Ramakrishna Mission</strong><br>Library assistance & book sorting<br>Aug 11, 2025<br>Rajkot, Gujarat<br><a href="volunteer_form.html?ngo=Ramakrishna Mission" class="apply-btn">Apply Now</a></div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2025 Outreach+. All rights reserved.</p></footer>
+</body>
+</html>
