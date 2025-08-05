@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .donation-form {
+            background-color: #fff7ef;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            text-align: left;
+        }
+        .donation-form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        .donation-form input,
+        .donation-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+        .donation-form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5c3d2e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function updateFee() {
+            const input = document.getElementById("amountInput");
+            const feeElem = document.getElementById("fee");
+            const netElem = document.getElementById("receive");
+
+            input.addEventListener("input", () => {
+                const amount = parseFloat(input.value);
+                if (!isNaN(amount)) {
+                    const fee = amount * 0.01;
+                    const net = amount - fee;
+                    feeElem.textContent = `₹ ${fee.toFixed(2)}`;
+                    netElem.textContent = `₹ ${net.toFixed(2)}`;
+                }
+            });
+        }
+        window.onload = updateFee;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Outreach+</h1>
+        <p>Connecting surplus food and volunteers to those in need</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portal.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Donation Form</h2>
+        <form class="donation-form">
+            <label>Full Name</label>
+            <input type="text" required>
+            <label>Email Address</label>
+            <input type="email" required>
+            <label>NGO Name</label>
+            <input type="text" required>
+            <label>Donation Amount (₹)</label>
+            <input type="number" id="amountInput" required>
+            <label>Message (Optional)</label>
+            <textarea></textarea>
+            <p>Platform Fee (1%): <span id="fee">₹ 0.00</span></p>
+            <p>NGO Will Receive: <span id="receive">₹ 0.00</span></p>
+            <button type="submit">Donate</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Outreach+. All rights reserved.</p>
+    </footer>
+</body>
+</html>
