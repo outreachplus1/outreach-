@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('success-msg').style.display = 'block';
+        }
+        function setNGO() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const ngo = urlParams.get("ngo");
+            if (ngo) {
+                document.getElementById("ngo-name").value = ngo;
+                document.getElementById("foundation-name").textContent = ngo;
+            }
+        }
+        window.onload = setNGO;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Outreach+</h1>
+        <p>Connecting surplus food and volunteers to those in need</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="donate.html">Donate</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2 class="center">Volunteer Application</h2>
+        <form class="form-box narrow" onsubmit="handleSubmit(event)">
+            <h3 class="center" id="foundation-name">Smile Foundation</h3>
+            <label>Full Name</label><input type="text" required>
+            <label>Email</label><input type="email" required>
+            <label>Phone Number</label><input type="tel" required>
+            <label>Preferred Time Slot</label>
+            <select>
+                <option>Optional</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
+            <label>Why do you want to volunteer?</label>
+            <input type="text">
+            <input type="hidden" id="ngo-name" name="ngo">
+            <button type="submit">Submit</button>
+            <p id="success-msg" class="success" style="display:none;">Application Sent!</p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Outreach+. All rights reserved.</p>
+    </footer>
+</body>
+</html>
