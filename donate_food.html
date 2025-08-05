@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            alert("🚗 Pickup driver arriving in approximately 45 minutes.");
+        }
+    </script>
+</head>
+<body class="food-donation-page">
+    <div class="container">
+        <p class="hotline">Food Rescue Hotline: +91-98765-43210</p>
+        <h1>DONATE FOOD</h1>
+        <p class="subtext">
+            Outreach+ helps redirect extra food to those who need it most.
+            After submission, a delivery volunteer will reach your location in approximately 45 minute.
+        </p>
+        <form onsubmit="showPopup(event)" class="food-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Pickup Address</option>
+                <option value="Cooked">Cooked Food</option>
+                <option value="Uncooked">Uncooked Food</option>
+                <option value="Packaged">Packaged Food</option>
+            </select>
+            <input type="text" placeholder="Quantity (e.g. number of people it can feed)" required>
+            <input type="text" placeholder="Special Instructions">
+            <button type="submit">SUBMIT</button>
+        </form>
+        <div class="note">
+            <p>🚚 Please ensure the food is safely packed.</p>
+            <p>Volunteers will verify pickup timing before dispatch.</p>
+        </div>
+    </div>
+</body>
+</html>
