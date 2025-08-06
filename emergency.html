@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Relief Fund - Outreach+</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fdf4e3;
+            color: #3e1e00;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #3e1e00;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .donation-card {
+            border: 2px solid #3e1e00;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .donation-card h2 {
+            margin-top: 0;
+        }
+        .donate-btn {
+            background-color: #3e1e00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .donate-btn:hover {
+            background-color: #5a2e00;
+        }
+        .form-section {
+            display: none;
+            margin-top: 30px;
+        }
+        .form-section input, .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="volunteer.html">Volunteer</a>
+  <a href="donate.html">Donate</a>
+  <a href="donate-food.html">Donate Food</a>
+</nav>
+
+<div class="container">
+    <div class="donation-card">
+        <h2>Aapda Raahat Kosh 2025</h2>
+        <p>Government of Himachal Pradesh</p>
+        <button class="donate-btn" onclick="showForm()">Donate</button>
+    </div>
+
+    <div class="form-section" id="donationForm">
+        <h3>Make Your Donation</h3>
+        <form onsubmit="submitDonation(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="number" placeholder="Donation Amount (INR)" required>
+            <textarea placeholder="Message (optional)" rows="4"></textarea>
+            <button type="submit" class="donate-btn">Submit Donation</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Outreach+. All rights reserved.
+</footer>
+
+<script>
+    function showForm() {
+        document.getElementById('donationForm').style.display = 'block';
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    function submitDonation(event) {
+        event.preventDefault();
+        alert("🙏 Thank you for your donation!");
+        // In real implementation, you'd send this data to a backend.
+    }
+</script>
+
+</body>
+</html>
