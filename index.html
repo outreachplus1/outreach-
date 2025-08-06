@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to Outreach+</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Welcome to Outreach+</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9f1e6;
+      color: #3e2f1c;
+    }
+
+    header {
+      background-color: #5c3b1e;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #3e2f1c;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200');
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .hero h1 {
+      background-color: rgba(0,0,0,0.4);
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 42px;
+    }
+
+    footer {
+      background-color: #5c3b1e;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Outreach+</h1>
-        <p>Connecting surplus food and volunteers to those in need</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-       <a href="donate_food.html">Donate Food</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <header>
+    <h1>Outreach+</h1>
+    <p>Connecting surplus food and volunteers to those in need</p>
+  </header>
 
-    <section>
-        <h2>Welcome to Outreach+</h2>
-        <p>We collect extra food from households, restaurants, and events and distribute it to those in need. NGOs can also post volunteer needs and people can register to help.</p>
-    </section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="donate-ngos.html">Donate</a>
+    <a href="donate-food.html">Donate Food</a>
+    <a href="relief-fund.html">Emergency Relief</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <footer>
-        <p>&copy; 2025 Outreach+. All rights reserved.</p>
-    </footer>
+  <div class="hero">
+    <h1>Turn Compassion Into Action</h1>
+  </div>
+
+  <section>
+    <h2>Welcome to Outreach+</h2>
+    <p>
+      We collect extra food from households, restaurants, and events and distribute it to those in need.  
+      NGOs can also post volunteer needs and people can register to help.  
+      Explore opportunities to make a difference by donating, volunteering, or supporting emergency relief.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Outreach+. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
