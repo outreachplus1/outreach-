@@ -1,43 +1,108 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Donate Food</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function showPopup(event) {
-            event.preventDefault();
-            alert("🚗 Pickup driver arriving in approximately 45 minutes.");
+  <title>Donate Food</title>
+    <style>
+        body {
+            background-color: #f9f1e6;
+            font-family: 'Segoe UI', sans-serif;
+            color: #3e2f1c;
+            margin: 0;
+            padding: 0;
         }
-    </script>
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff4e6;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #3e2f1c;
+        }
+        .hotline {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #d2b48c;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #5c3b1e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4a2f17;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        .note img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body class="food-donation-page">
+<body>
     <div class="container">
-        <p class="hotline">Food Rescue Hotline: +91-98765-43210</p>
+        <div class="hotline">Food Rescue Hotline: +91-98765-43210</div>
         <h1>DONATE FOOD</h1>
-        <p class="subtext">
+        <div class="subtitle">
             Outreach+ helps redirect extra food to those who need it most.
-            After submission, a delivery volunteer will reach your location in approximately 45 minute.
-        </p>
-        <form onsubmit="showPopup(event)" class="food-form">
+            After submission, a delivery volunteer will reach your location in approximately 45 minutes.
+        </div>
+        <form onsubmit="submitForm(event)">
             <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="Phone Number" required>
+            <input type="tel" placeholder="Phone Number" required>
             <input type="text" placeholder="Pickup Address" required>
             <select required>
-                <option value="">Type of Food</option>
-                <option value="Cooked">Cooked Food</option>
-                <option value="Uncooked">Uncooked Food</option>
-                <option value="Packaged">Packaged Food</option>
+                <option value="" disabled selected>Type of Food</option>
+                <option>Cooked</option>
+                <option>Raw</option>
+                <option>Packaged</option>
             </select>
-            <input type="text" placeholder="Quantity (e.g. number of people it can feed)" required>
-            <input type="text" placeholder="Special Instructions">
+            <input type="text" placeholder="Quantity (e.g., number of people it can feed)" required>
+            <textarea placeholder="Special Instructions"></textarea>
             <button type="submit">SUBMIT</button>
         </form>
         <div class="note">
-            <p>🚚 Please ensure the food is safely packed.</p>
-            <p>Volunteers will verify pickup timing before dispatch.</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="truck icon">
+            Please ensure the food is safely packed. Volunteers will verify pickup timing before dispatch.
         </div>
     </div>
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            alert("Your food will be picked up in approximately 45 minutes.");
+        }
+    </script>
 </body>
 </html>
