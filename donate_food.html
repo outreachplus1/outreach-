@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <title>Donate Food</title>
+    <title>Donate Food</title>
     <style>
         body {
             background-color: #f9f1e6;
@@ -11,6 +11,25 @@
             margin: 0;
             padding: 0;
         }
+
+        nav {
+            background-color: #5c3b1e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             max-width: 500px;
             margin: 50px auto;
@@ -19,20 +38,24 @@
             padding: 30px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         h1 {
             text-align: center;
             font-size: 32px;
             margin-bottom: 10px;
             color: #3e2f1c;
         }
+
         .hotline {
             text-align: center;
             font-weight: bold;
             font-size: 16px;
         }
+
         form {
             margin-top: 20px;
         }
+
         input, select, textarea {
             width: 100%;
             padding: 12px;
@@ -41,6 +64,7 @@
             border-radius: 5px;
             font-size: 16px;
         }
+
         button {
             width: 100%;
             padding: 14px;
@@ -51,19 +75,23 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #4a2f17;
         }
+
         .note {
             margin-top: 20px;
             font-size: 14px;
             display: flex;
             align-items: center;
         }
+
         .note img {
             width: 20px;
             margin-right: 10px;
         }
+
         .subtitle {
             text-align: center;
             font-size: 15px;
@@ -72,13 +100,23 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portal.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <div class="container">
         <div class="hotline">Food Rescue Hotline: +91-98765-43210</div>
         <h1>DONATE FOOD</h1>
         <div class="subtitle">
             Outreach+ helps redirect extra food to those who need it most.
-
-     </div>
+            
+        </div>
         <form onsubmit="submitForm(event)">
             <input type="text" placeholder="Full Name" required>
             <input type="tel" placeholder="Phone Number" required>
@@ -98,11 +136,14 @@
             Please ensure the food is safely packed. Volunteers will verify pickup timing before dispatch.
         </div>
     </div>
+
     <script>
         function submitForm(e) {
             e.preventDefault();
             alert("Your food will be picked up in approximately 45 minutes.");
         }
     </script>
+
 </body>
 </html>
+
