@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Outreach+</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             background-color: #fdf4e3;
             color: #3e1e00;
             font-family: 'Georgia', serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
+
         .splash-container {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            transition: opacity 1s ease;
         }
+
         img {
             width: 200px;
             margin-bottom: 20px;
+            animation: zoomIn 1s ease-out;
         }
+
         h1 {
             margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
         }
+
         .enter-btn {
             background-color: #3e1e00;
             color: white;
@@ -35,20 +42,54 @@
             font-size: 18px;
             border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: both;
         }
+
         .enter-btn:hover {
             background-color: #5c2e00;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="splash-container">
+    <div class="splash-container" id="splash">
         <img src="images/logo.png" alt="Outreach+ Logo">
         <h1>Connecting you to the change you believe in</h1>
-        <a href="index.html">
-            <button class="enter-btn">Enter</button>
-        </a>
+        <button class="enter-btn" onclick="fadeAndRedirect()">Enter</button>
     </div>
+
+    <script>
+        function fadeAndRedirect() {
+            const splash = document.getElementById('splash');
+            splash.style.opacity = 0;
+            setTimeout(() => {
+                window.location.href = 'home.html'; // redirect to actual homepage
+            }, 1000); // 1 second for fade-out
+        }
+    </script>
 </body>
 </html>
+
