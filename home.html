@@ -1,120 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Welcome to Outreach+</title>
+  <meta charset="UTF-8">
+  <title>Outreach+ | Home</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f9f1e6;
-      color: #3e2f1c;
+      font-family: Arial, sans-serif;
+      background-color: #f9f2e7;
     }
 
     header {
-      background-color: #5c3b1e;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #3e2f1c;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    section p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200');
+      position: relative;
+      background-image: url('images/flood.png');
       background-size: cover;
       background-position: center;
-      height: 350px;
+      height: 80vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: white;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
-    .hero h1 {
-      background-color: rgba(0,0,0,0.4);
-      padding: 20px 40px;
-      border-radius: 10px;
-      font-size: 42px;
-    }
-
-    footer {
-      background-color: #5c3b1e;
-      color: white;
+      align-items: center;
+      flex-direction: column;
       text-align: center;
-      padding: 15px 10px;
-      position: relative;
-      bottom: 0;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    header h2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      max-width: 800px;
+    }
+
+    .donate-btn {
+      margin-top: 20px;
+      background-color: #4e2e1e;
+      color: #fff;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .donate-btn:hover {
+      background-color: #6d3c27;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
       width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0;
+      padding: 1rem;
+      font-size: 1.2rem;
+      background-color: #f1e7d0;
+      color: #4e2e1e;
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header with image and text -->
   <header>
-    <h1>Outreach+</h1>
-    <p>Connecting surplus food and volunteers to those in need</p>
+    <h2>
+      Heavy rainfall and a suspected cloudburst in the Uttarkashi district of Uttarakhand have triggered flash floods and mudslides, particularly impacting the Dharali village.
+    </h2>
+    <a href="emergency-relief.html">
+      <button class="donate-btn">Donate</button>
+    </a>
   </header>
 
- <nav>
-  <a href="home.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="volunteer.html">Volunteer</a>
-  <a href="donate.html">Donate</a>
-  <a href="donate_food.html">Donate Food</a>
-   <a href="emergency.html">Emergency Relief</a>
-</nav>
+  <!-- Grid Section with image boxes -->
+  <section class="grid-section">
+    <a href="volunteer.html" class="card-link">
+      <div class="card">
+        <img src="images/volunteer.jpg" alt="Volunteer">
+        <h3>Volunteer</h3>
+      </div>
+    </a>
 
+    <a href="donate-food.html" class="card-link">
+      <div class="card">
+        <img src="images/donate-food.jpg" alt="Donate Food">
+        <h3>Donate Food</h3>
+      </div>
+    </a>
 
-  <div class="hero">
-    <h1>Turn Compassion Into Action</h1>
-  </div>
+    <a href="donate-ngos.html" class="card-link">
+      <div class="card">
+        <img src="images/donate-money.jpg" alt="Donate Money">
+        <h3>Donate</h3>
+      </div>
+    </a>
 
-  <section>
-    <h2>Welcome to Outreach+</h2>
-    <p>
-      We collect extra food from households, restaurants, and events and distribute it to those in need.  
-      NGOs can also post volunteer needs and people can register to help.  
-      Explore opportunities to make a difference by donating, volunteering, or supporting emergency relief.
-    </p>
+    <a href="about.html" class="card-link">
+      <div class="card">
+        <img src="images/about.jpg" alt="About Us">
+        <h3>About Us</h3>
+      </div>
+    </a>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Outreach+. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
+
